@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+"Output a summary table including minimum, lower quartile, median, upper quartile, maximum of a number sequence"
+
+import numpy
+from statstools import run
+from scipy.stats import scoreatpercentile
+
+def summary(data):
+  q1 = scoreatpercentile(data,25)
+  q3 = scoreatpercentile(data,75)
+  md = numpy.median(data)
+  return (min(data), q1, md, q3, max(data))
+
+if __name__ == '__main__':
+  run(summary, __doc__, format='Min.: %s\n1st Qu.: %s\nMedian: %s\n3rd Qu.: %s\nMax: %s')

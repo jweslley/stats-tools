@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+"Calculate the sum of a number sequence"
+
+from statstools import run
+
+if __name__ == '__main__':
+  run('sum', __doc__)
