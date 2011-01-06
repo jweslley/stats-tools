@@ -8,7 +8,7 @@ setup(
    name =          'stats-tools',
    version =       stats.__version__,
    description =   stats.__doc__,
-   long_description=open('README.rst').read(),
+   #long_description=open('README.rst').read(),
    author =        stats.__author__,
    author_email =  stats.__contact__,
    url =           stats.__homepage__,
