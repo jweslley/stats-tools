@@ -1,6 +1,8 @@
 stats-tools - A set of command-line statistics tools
 ====================================================
 
+.. contents::
+
 Installation
 ------------
 
