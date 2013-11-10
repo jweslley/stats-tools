@@ -117,3 +117,9 @@ License
 MIT license. Copyright (c) 2011 Jonhnny Weslley <http://jonhnnyweslley.net>
 
 See the LICENSE file provided with the source distribution for full details.
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/jweslley/stats-tools/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
