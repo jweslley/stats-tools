@@ -1,7 +1,0 @@
-#!/usr/bin/env python
-"Output a summary table including mean, median, mininum, maximum, standard deviation and variance of a number sequence"
-
-from statstools import run
-
-if __name__ == '__main__':
-  run(['mean','median','min','max','std','var'], __doc__)

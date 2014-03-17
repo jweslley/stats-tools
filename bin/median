@@ -1,7 +1,0 @@
-#!/usr/bin/env python
-"Calculate the median of a number sequence"
-
-from statstools import run
-
-if __name__ == '__main__':
-  run('median', __doc__)

@@ -1,7 +1,0 @@
-#!/usr/bin/env python
-"Calculate the minimum of a number sequence"
-
-from statstools import run
-
-if __name__ == '__main__':
-  run('min', __doc__)
