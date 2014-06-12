@@ -2,21 +2,22 @@ package stats
 
 import (
 	"encoding/csv"
-	"flag"
 	"fmt"
 	"io"
 	"os"
 	"strconv"
 	"unicode/utf8"
+
+	flag "github.com/ogier/pflag"
 )
 
 var (
-	ignore = flag.Bool("i", false, "ignore invalid numbers")
-	behead = flag.Bool("b", false,
+	ignore = flag.BoolP("ignore", "i", false, "ignore invalid numbers")
+	behead = flag.BoolP("behead", "b", false,
 		"remove the first line (head) from calculations. Useful to ignore column names")
-	separator = flag.String("s", " ",
+	separator = flag.StringP("separator", "s", " ",
 		"define the SEPARATOR to use instead of whitespace for column separator")
-	column = flag.Int("c", 1, "calculate stats based on the specified COLUMN")
+	column = flag.IntP("column", "c", 1, "calculate stats based on the specified COLUMN")
 )
 
 func fail(format string, v ...interface{}) {
