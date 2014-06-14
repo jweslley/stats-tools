@@ -1,0 +1,11 @@
+filesets:
+  includes:
+  - README.md
+  - LICENSE
+  - bin
+  excludes:
+  - .*.go
+settings:
+  targetdir: "bin"
+  addopts: "./cmd/..."
+  yaml"cgoenable": false
