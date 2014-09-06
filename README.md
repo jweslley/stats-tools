@@ -5,6 +5,11 @@ A set of command-line statistics tools.
 
 ## Installation
 
+[Download](http://beta.gobuild.io/github.com/jweslley/stats-tools) the binaries here put them somewhere in your path.
+
+
+### From source
+
     git clone git://github.com/jweslley/stats-tools.git
     cd stats-tools
     make
