@@ -1,11 +1,14 @@
+author: "Jonhnny Weslley"
+description: "A set of command-line statistics tools"
 filesets:
   includes:
   - README.md
   - LICENSE
-  - bin
   excludes:
-  - .*.go
+  - \.git
+  - .*\.go
+  depth: 3
 settings:
-  targetdir: "bin"
-  addopts: "./cmd/..."
-  yaml"cgoenable": false
+  targetdir: 'bin'
+  outfiles: ['bin/max', 'bin/mean', 'bin/min', 'bin/stats', 'bin/std', 'bin/sum', 'bin/var']
+  build: go install -v ./cmd/...
