@@ -11,13 +11,16 @@ import (
 	flag "github.com/ogier/pflag"
 )
 
+const programVersion = "0.0.1"
+
 var (
 	ignore = flag.BoolP("ignore", "i", false, "ignore invalid numbers")
 	behead = flag.BoolP("behead", "b", false,
 		"remove the first line (head) from calculations. Useful to ignore column names")
 	separator = flag.StringP("separator", "s", " ",
 		"define the SEPARATOR to use instead of whitespace for column separator")
-	column = flag.IntP("column", "c", 1, "calculate stats based on the specified COLUMN")
+	column  = flag.IntP("column", "c", 1, "calculate stats based on the specified COLUMN")
+	version = flag.BoolP("version", "v", false, "print version information and exit")
 )
 
 func fail(format string, v ...interface{}) {
@@ -83,6 +86,11 @@ func Tool(desc string, outputter func(s *Stats)) {
 		fmt.Fprintln(os.Stderr, "\nWith no FILE, or when FILE is -, read standard input.")
 	}
 	flag.Parse()
+
+	if *version {
+		fmt.Printf("%s %s\n", os.Args[0], programVersion)
+		return
+	}
 
 	s := NewStats()
 	calculate(s)
